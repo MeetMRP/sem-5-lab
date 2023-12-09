@@ -9,7 +9,7 @@ graph = {
 visited = []
 
 
-def bfs(graph, start_node, goal):
+def dfs(graph, start_node, goal):
     visited = []
     closed_list = []
     queue = []
@@ -46,8 +46,8 @@ def bfs(graph, start_node, goal):
     
     return None
 
-print("Following is the Breadth-First Search") 
-route = bfs (
+print("Following is the Depth-First Search") 
+route = dfs (
     graph=graph,
     start_node='5',
     goal='4'
