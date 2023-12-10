@@ -1,0 +1,6 @@
+org 100h
+
+MOV AX, [1000h]
+MOV BX, [1002h]
+ADD AX, BX
+MOV [1004h], AX

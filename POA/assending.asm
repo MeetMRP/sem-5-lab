@@ -1,0 +1,33 @@
+ORG 1000H
+
+MOV [3000H], 25H 
+MOV [3001H], 15H
+MOV [3002H], 45H
+MOV [3003H], 35H
+MOV [3004H], 55H
+
+MOV SI, 3000H
+MOV DX, 3001H
+MOV CH, 04H
+
+BACK1:
+    MOV CL, CH
+    MOV DI, DX
+BACK:
+    MOV AL, [SI]
+    MOV BL, [DI]
+    CMP AL, BL
+    JC NEXT
+    MOV [SI], BL
+    MOV [DI], AL
+NEXT:
+    INC DI
+    DEC CL
+    JNZ BACK
+    
+    INC SI
+    INC DX
+    DEC CH
+    JNZ BACK1 
+    
+ret
