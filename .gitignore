@@ -5,3 +5,5 @@
 *.symbol
 *.bin
 *.bin_BKP30444
+*.db
+*.db-wal
