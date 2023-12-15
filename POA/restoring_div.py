@@ -1,4 +1,4 @@
-def accurate_restoring_division(dividend, divisor):
+def restoring_division(dividend, divisor):
     # Number of bits for shifting
     n = max(dividend.bit_length(), divisor.bit_length())
 
@@ -26,5 +26,5 @@ def accurate_restoring_division(dividend, divisor):
     return quotient, remainder
 
 # Testing the function
-print(accurate_restoring_division(17, 3))
+print(restoring_division(17, 3))
 
