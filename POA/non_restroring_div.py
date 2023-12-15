@@ -34,25 +34,30 @@ while count > 0:
     merged = a+q
     leftshift = merged[1:]
     a = leftshift[:maxlen+1]
-    a = bin(int(a,2)+int(minusm,2)).replace("0b","")
-    if len(a) > maxlen+1:
-        a=a[1:]
-    a = a.zfill(maxlen+1)
 
-    if a[0] == "0":
-        leftshift = a+q[1:]
-        leftshift += "1"
-    else:
+    if a[0] == "1":
         a = bin(int(a,2)+int(m,2)).replace("0b","")
         if len(a) > maxlen+1:
             a=a[1:]
         a = a.zfill(maxlen+1)
-        leftshift = a+q[1:]
+    else:
+        a = bin(int(a,2)+int(minusm,2)).replace("0b","")
+        if len(a) > maxlen+1:
+            a=a[1:]
+        a = a.zfill(maxlen+1)
+ 
+
+    leftshift = a+q[1:]
+
+    if a[0] == "1":
         leftshift += "0"
+    else:
+        leftshift +="1"
 
     a = leftshift[:maxlen+1]
     q = leftshift[maxlen+1:]
     count -=1
+
 
 if a[0] == "1":
 
@@ -62,3 +67,5 @@ if a[0] == "1":
 
 print(int(a,2))
 print(int(q,2))
+
+        
