@@ -10,5 +10,5 @@ for i in inserts:
         print('cant insert ',i)
     else:
         print('inserted ',i,' at size of ',spaces[0])
-        spaces[0]=spaces[0]-i
+        spaces.remove(spaces[0])
         spaces.sort(reverse=True)
