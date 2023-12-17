@@ -7,3 +7,4 @@
 *.bin_BKP30444
 *.db
 *.db-wal
+test.py

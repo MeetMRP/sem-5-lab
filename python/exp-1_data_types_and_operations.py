@@ -27,17 +27,17 @@ print(True)
 print(type(True), '\n')
 
 print('List:')
-List = ['Hi', '20', 'how', 'u', 'doinnn']
+List = ['Hi', '20', 'how', 'u', 'doinnn', 20]
 print(List)
 print(type(List), '\n')
 
 print('Set:')
-Set = {'Meet', 'hi', 20}
+Set = {'Meet', 'hi', 20, 20, 20}
 print(Set)
 print(type(Set), '\n')
 
 print('Tuple:')
-Tuple = ('Meet', 'hi', 20)
+Tuple = ('Meet', 'hi', 20, 20)
 print(Tuple)
 print(type(Tuple), '\n')
 
